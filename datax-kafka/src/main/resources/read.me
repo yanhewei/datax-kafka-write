@@ -1,0 +1,14 @@
+writer: {
+              "name": "kafkaproduct", # write插件的名称：kafkaproduct,不需要修改
+              "parameter": {
+                  "bootstrapservers":"127.0.0.1:9092", #bootstrap.servers是Kafka集群的IP地址，如果Broker数量超过1个，则使用逗号分隔，如"192.168.1.110:9092,192.168.1.110:9092"。其中，192.168.1.110是我的其中一台虚拟机的
+                  "ack": "all",   # 等待所有副本节点的应答
+                  "retries": "0",  # #消息发送最大尝试次数
+                  "batchsize": "16384",  # 一批消息处理大小
+                  "lingerms": "1", # 请求延时
+                  "buffermemory": "33554432",  # 发送缓存区内存大小
+                  "topic": "demo",  # 订阅主题
+                  "key": "demo" , # 关键字
+                  "attrue":"id,username,password,creattime"#对应的属性，最后转换为一个json字符串
+              }
+          }

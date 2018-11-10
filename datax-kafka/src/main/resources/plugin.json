@@ -1,0 +1,6 @@
+{
+    "name": "kafkaproduct",
+    "class": "com.ytkj.dataxkafka.datax_kafka.write.DataxKafkaWriter",
+    "description": "适用于: 生产环境.  原理: TODO",
+    "developer": "ytkj"
+}
